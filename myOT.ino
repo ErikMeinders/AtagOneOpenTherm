@@ -1,5 +1,26 @@
 #include "timing.h"
 
+// Wemos D1 on 1of!-Wemos board
+
+#define THERMOSTAT_IN   16
+#define THERMOSTAT_OUT   4
+#define BOILER_IN        5
+#define BOILER_OUT      14
+
+int8_t mode=0;
+bool onoffOverride = false;
+int lastOnOffOverride = 0;
+
+#define MODE_LISTEN_MASTER  0
+#define MODE_GET_MESSAGE_FROM_MASTER 2
+#define MODE_FORWARD_MESSAGE_TO_SLAVE 3
+
+#define MODE_LISTEN_SLAVE   1
+#define MODE_GET_MESSAGE_FROM_SLAVE 4
+#define MODE_FORWARD_MESSAGE_TO_MASTER 5
+
+#define MODE_ERROR 9
+
 struct override {
     int8_t  msgNr;
     float   newValue;
@@ -8,13 +29,13 @@ struct override {
 
 struct override OverRides[] = { 
   {
-    OT_MSGID_CH_SETPOINT, 40.0, false
+    OT_MSGID_CH_SETPOINT, 42.1, false
   },
   {
-    OT_MSGID_ROOM_SETPOINT, 20.0, false
+    OT_MSGID_ROOM_SETPOINT, 20.1, false
   },
   {
-    OT_MSGID_ROOM_TEMP, 20.0, false
+    OT_MSGID_ROOM_TEMP, 20.1, false
   }
 };
 
@@ -39,6 +60,18 @@ struct bcmd {
     float   Tr;         // 24
     float   TdhwSet;    // 56
 } bcmd;
+
+OpenthermData busMessage;
+OpenthermData ownMessage;
+OpenthermData message;
+
+int8_t messageSource = 0;
+
+#define OT_MSG_SOURCE_BUS 0
+#define OT_MSG_SOURCE_SELF 1
+
+#define boilerOn() switchBoiler(1)
+#define boilerOff() switchBoiler(0)
 
 #define DumpF(txt) sprintf(msgTxt, "%20.20s %6.2f", txt, data.f88());
 #define DumpI(txt) sprintf(msgTxt, "%20.20s %6d",   txt, data.u16());
@@ -72,11 +105,15 @@ void printToDebug(int mode, OpenthermData &data)
   char msgTxt[60];
   msgTxt[0]='\0';
 
-  if (mode == MODE_LISTEN_MASTER)
-  {
-    DebugT("LM: ");
-  } else {
-    DebugT("LS: ");
+  switch (mode) {
+    case MODE_LISTEN_MASTER:
+      DebugT("LM: ");
+      break;
+    case MODE_LISTEN_SLAVE:
+      DebugT("LS: ");
+      break;
+    default:
+      DebugTf("%02d: ", mode);
   }
   
   if (data.type == OT_MSGTYPE_READ_DATA) {
@@ -111,15 +148,23 @@ void printToDebug(int mode, OpenthermData &data)
                 break;
     case 1:     DumpF("Tset");
                 break;
+    case 14:    DumpF("MaxRelMod")
+                break;
     case 16:    DumpF("Trset");
                 break;
     case 17:    DumpF("RelMod");
                 break;
     case 18:    DumpF("CH-pres");
                 break;
+    case 19:    DumpF("DHWflowRate");
+                break;
     case 24:    DumpF("Tr");
                 break;
     case 25:    DumpF("Tboiler");
+                break;
+    case 26:    DumpF("DHWTemp");
+                break;
+    case 27:    DumpF("Toutside");
                 break;
     case 28:    DumpF("Tret");
                 break;
@@ -163,6 +208,7 @@ void updateInfo(int mode, OpenthermData &data)
         case 49:    binfo.CHLow = data.valueHB;
                     binfo.CHHigh = data.valueLB;
                     break;
+
         default:    Debugf("Not caputed READ_ACK for %d\n", data.id);
         }
     }
@@ -189,6 +235,17 @@ void updateInfo(int mode, OpenthermData &data)
     }
 
 }
+
+void switchBoiler(int8_t onoff)
+{
+  ownMessage = { OT_MSGTYPE_WRITE_DATA, OT_MSGID_MASTER_CONFIG, onoff, 0x30};
+
+  OPENTHERM::send(BOILER_OUT, ownMessage);
+  messageSource = OT_MSG_SOURCE_SELF;
+  mode = MODE_LISTEN_SLAVE;
+  lastOnOffOverride = onoff;
+}
+ 
 void modifyMessage(int mode, OpenthermData &data)
 {
     bool modified=false;
@@ -212,6 +269,23 @@ void modifyMessage(int mode, OpenthermData &data)
             o = nrOverRides; // don't search further
           }
         }
+    } else {
+      if (data.type == OT_MSGTYPE_READ_DATA && data.id == OT_MSGID_STATUS) {
+        // READ COMMAND SWITCHES BOILER STATE !
+        uint8_t newHB;
+        if (bcmd.Tset > 0){
+          newHB = data.valueHB | 0x01;
+          Debugln("CH on");
+        } else {
+          newHB = data.valueHB & 0xFE;
+          Debugln("CH off");
+        }
+        if(newHB != data.valueHB)
+        {
+          modified = true;
+          data.valueHB = newHB;
+        }
+      }
     }
 
     if(modified) {
@@ -220,35 +294,116 @@ void modifyMessage(int mode, OpenthermData &data)
     }
 }
 
+void myOpenthermSetup()
+{
+ 
+  pinMode(THERMOSTAT_IN, INPUT);
+  digitalWrite(THERMOSTAT_IN, HIGH); // pull up
+
+  digitalWrite(THERMOSTAT_OUT, HIGH);
+  pinMode(THERMOSTAT_OUT, OUTPUT); // low output = high current, high output = low current
+
+  pinMode(BOILER_IN, INPUT);
+  digitalWrite(BOILER_IN, HIGH); // pull up
+
+  digitalWrite(BOILER_OUT, LOW);
+  pinMode(BOILER_OUT, OUTPUT); // low output = high voltage, high output = low voltage
+
+  httpServer.on("/api", HTTP_GET, processAPI);
+  httpServer.on("/api/v0/override", HTTP_PUT, overrideAPI);  
+
+}
+
 void myOpenthermLoop()
 {
-  if (mode == MODE_LISTEN_MASTER) {   // listen to room controller
- 
-    if (OPENTHERM::isSent() || OPENTHERM::isIdle() || OPENTHERM::isError()) {
-      OPENTHERM::listen(THERMOSTAT_IN);
-    } else if (OPENTHERM::getMessage(message)) {
-      // printToDebug(mode,message);
-      modifyMessage(mode, message);
-      updateInfo(mode, message);
+  if(OPENTHERM::isError())
+    mode = MODE_ERROR;
 
-      OPENTHERM::send(BOILER_OUT, message); // forward message to boiler
-      mode = MODE_LISTEN_SLAVE;
-    }
-  } else if (mode == MODE_LISTEN_SLAVE) { // listen to boiler
-    if (OPENTHERM::isSent()) {
-      OPENTHERM::listen(BOILER_IN, 800); // response need to be send back by boiler within 800ms
-    }
-    else if (OPENTHERM::getMessage(message)) {
-      // printToDebug(mode, message);
-      updateInfo(mode, message);
+  switch(mode){
+  case MODE_LISTEN_MASTER:   // listen to room controller
+    DebugTln("MODE_LISTEN_MASTER");
+    if (OPENTHERM::isSent() || OPENTHERM::isIdle() || OPENTHERM::isError()) 
+        OPENTHERM::listen(THERMOSTAT_IN);
+    
+    if (OPENTHERM::hasMessage())
+      mode=MODE_GET_MESSAGE_FROM_MASTER;
 
-      OPENTHERM::send(THERMOSTAT_OUT, message); // send message back to thermostat
-      mode = MODE_LISTEN_MASTER;
+    break;
+
+  case MODE_GET_MESSAGE_FROM_MASTER:
+    DebugTln("MODE_GET_MESSAGE_FROM_MASTER");
+
+    if (OPENTHERM::getMessage(busMessage)) 
+    {
+      printToDebug(mode,busMessage);
+      updateInfo(mode, busMessage);
+
+      // hijack this message type and return response without waiting for boiler!
+/*
+      if(busMessage.id == OT_MSGID_MASTER_CONFIG && onoffOverride) {
+        Debugln("Hijacked message, returning ACK");
+        ownMessage = { OT_MSGTYPE_WRITE_ACK, OT_MSGID_MASTER_CONFIG, busMessage.valueHB, busMessage.valueLB };
+        delay(300);
+        OPENTHERM::send(THERMOSTAT_OUT, ownMessage);
+        mode = MODE_LISTEN_MASTER;
+        return;
+      }
+*/
+      modifyMessage(mode, busMessage);
+
+      mode=MODE_FORWARD_MESSAGE_TO_SLAVE;
+
+    } else mode = MODE_ERROR ;
+    break;
+
+  case MODE_FORWARD_MESSAGE_TO_SLAVE:
+    DebugTln("MODE_FORWARD_MESSAGE_TO_SLAVE");
+
+    //if( OPENTHERM::isIdle() || OPENTHERM::isError() ){
+        OPENTHERM::send(BOILER_OUT, busMessage); // forward message to boiler
+        mode = MODE_LISTEN_SLAVE;
+    //}
+    break;
+
+  case MODE_LISTEN_SLAVE:  // listen to boiler
+    DebugTln("MODE_LISTEN_SLAVE");
+
+    if( OPENTHERM::isSent()) {
+        OPENTHERM::listen(BOILER_IN, 800); // response need to be send back by boiler within 800ms
+        if( OPENTHERM::hasMessage() )
+          mode = MODE_GET_MESSAGE_FROM_SLAVE;
+        else
+          mode = MODE_ERROR;
+        
     }
-    else if (OPENTHERM::isError()) {
-      mode = MODE_LISTEN_MASTER;
+    break;
+
+  case MODE_GET_MESSAGE_FROM_SLAVE:
+    DebugTln("MODE_GET_MESSAGE_FROM_SLAVE");
+
+    if (OPENTHERM::getMessage(busMessage)) 
+    {
+      printToDebug(mode, busMessage);
+      updateInfo(mode, busMessage);
+      mode=MODE_FORWARD_MESSAGE_TO_MASTER;
+    } else mode = MODE_ERROR;
+    break;
+
+  case MODE_FORWARD_MESSAGE_TO_MASTER:
+    DebugTln("MODE_FORWARD_MESSAGE_TO_MASTER");
+    if( OPENTHERM::isIdle()) {
+        OPENTHERM::send(THERMOSTAT_OUT, busMessage); // send message back to thermostat
+       mode = MODE_LISTEN_MASTER;
+    }
+    break;
+
+  default:
+    if (OPENTHERM::isError()) {
       Debugln("<- Timeout");
+      OPENTHERM::setIdle();
     }
+    mode = MODE_LISTEN_MASTER;
+
   }
  
 }
@@ -273,7 +428,134 @@ void sendStatus()
   sendJsonObj("Tr",               bcmd.Tr);         // 24
   sendJsonObj("TdhwSet",          bcmd.TdhwSet);    // 56
 
+  sendJsonObj("onoffOverride",    onoffOverride ? 1 : 0);
+  sendJsonObj("lastOnOffOverride",lastOnOffOverride);
+  
   sendEndJsonObj();
 
 }
 
+void overrideAPI() 
+{
+  char fName[40] = "";
+  char URI[50]   = "";
+  String words[10];
+
+  DebugTln ("Entering overrideAPI");
+  strncpy( URI, httpServer.uri().c_str(), sizeof(URI) );
+
+  if (httpServer.method() != HTTP_PUT) 
+  {
+    httpServer.send(401, "text/plain", "401: internal server error\r\n");
+    return;
+  }
+
+  DebugTf("from[%s] URI[%s] method[PUT] \r\n",
+          httpServer.client().remoteIP().toString().c_str(), URI); 
+  
+  int8_t wc = splitString(URI, '/', words, 10);
+  
+  if (Verbose) 
+  {
+    DebugT(">>");
+    for (int w=0; w<wc; w++)
+    {
+      Debugf("word[%d] => [%s], ", w, words[w].c_str());
+    }
+    Debugln(" ");
+  }
+
+  if (words[1] != "api")
+  {
+    sendApiNotFound(URI);
+    return;
+  }
+
+  if (words[2] != "v0")
+  {
+    sendApiNotFound(URI);
+    return;
+  }
+
+  // use /api/v0/override/<OTparmNR>/<FloatValue>
+  // or  /api/v0/override/<OTparmNR>/disable
+
+  if (words[3] == "override")
+  {
+    int8_t param = atoi(words[4].c_str());
+    bool found = false;
+    for (int8_t o=0 ; o < nrOverRides && !found ; o++)
+    {
+      if ( OverRides[o].msgNr == param ) {
+        found=true;
+        if ( !strcmp(words[5].c_str(),"disable")) {
+          OverRides[o].enabled = false;
+        } else {
+          float newValue = atof(words[5].c_str());
+          OverRides[o].enabled = true;
+          OverRides[o].newValue = newValue;
+        }
+      }
+    }
+    if (!found) {
+      sendApiNotFound(URI);
+      return;
+    } else {
+      sendStatus();
+    }
+  } else if (words[3] == "boiler") {
+    Debugln("Boiler API called!");
+    if(words[4] == "on" ) {
+      boilerOn();
+      onoffOverride = true;
+      sendStatus();
+    } else if(words[4] == "off") {
+      boilerOff();
+      onoffOverride = true;
+      sendStatus();
+    } else if (words[4] == "auto"){
+      onoffOverride = false;
+      sendStatus();
+    } else sendApiNotFound(URI);
+
+  } else {
+    sendApiNotFound(URI);
+    return;
+  }
+  
+}
+
+void orgOpenthermLoop()
+{
+  if (mode == MODE_LISTEN_MASTER) {
+    if (OPENTHERM::isSent() || OPENTHERM::isIdle() || OPENTHERM::isError()) {
+      OPENTHERM::listen(THERMOSTAT_IN);
+    }
+    else if (OPENTHERM::getMessage(message)) {
+
+      printToDebug(mode, message);
+      modifyMessage(mode, message);
+      updateInfo(mode, message);
+
+      OPENTHERM::send(BOILER_OUT, message); // forward message to boiler
+      mode = MODE_LISTEN_SLAVE;
+    }
+  }
+  else if (mode == MODE_LISTEN_SLAVE) {
+    if (OPENTHERM::isSent()) {
+      OPENTHERM::listen(BOILER_IN, 800); // response need to be send back by boiler within 800ms
+    }
+    else if (OPENTHERM::getMessage(message)) {
+      printToDebug(mode, message);
+      modifyMessage(mode, message);
+      updateInfo(mode, message);
+
+      OPENTHERM::send(THERMOSTAT_OUT, message); // send message back to thermostat
+      mode = MODE_LISTEN_MASTER;
+    }
+    else if (OPENTHERM::isError()) {
+      mode = MODE_LISTEN_MASTER;
+      Debugln("<- Timeout");
+    }
+  }
+}

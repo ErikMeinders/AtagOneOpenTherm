@@ -187,11 +187,11 @@ bool handleFile(String&& path)
   if (!LittleFS.exists("/FSexplorer.html")) httpServer.send(200, "text/html", Helper); //Upload the FSexplorer.html
   if (path.endsWith("/")) path += "index.html";
   return LittleFS.exists(path) ? ({
-    //noInterrupts();
+    OPENTHERM::stop();
     File f = LittleFS.open(path, "r"); 
     httpServer.streamFile(f, contentType(path)); 
     f.close(); 
-    //interrupts();
+    OPENTHERM::listen(16);
     true;
     }) : false;
 
@@ -281,7 +281,7 @@ bool freeSpace(uint16_t const& printsize)
 void updateFirmware()
 {
   DebugTln(F("Redirect to updateIndex .."));
-  //noInterrupts(); //hjm
+  OPENTHERM::stop(); //hjm
   doRedirect("wait ... ", 1, "/updateIndex", false);
       
 } // updateFirmware()

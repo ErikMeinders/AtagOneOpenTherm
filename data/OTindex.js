@@ -2,16 +2,16 @@ const APIGW='http://'+window.location.host+'/api/';
 
 function update()
 {
-    console.log("About to call API")
+    //console.log("About to call API")
     fetch(APIGW+"v0/status")
     .then(response => response.json())
     .then(json => {
-        console.log("Received: ", json["otinfo"])
+        // console.log("Received: ", json["otinfo"])
 
         
         for( var key in json["otinfo"] ){
-            console.log("Key now is "+key);
-            console.log("Value is "+json["otinfo"][key]);
+            // console.log("Key now is "+key);
+            // console.log("Value is "+json["otinfo"][key]);
             
             el = document.getElementById(key)
             if (el)

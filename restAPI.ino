@@ -81,6 +81,8 @@ void processAPI()
   else if (words[3] == "status")
   {
       sendStatus();
+  } else if (words[3] == "override" || words[3] == "boiler") {
+    overrideAPI();
   }
   else sendApiNotFound(URI);
   

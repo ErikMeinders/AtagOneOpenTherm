@@ -83,16 +83,16 @@ const APIGW='http://'+window.location.host+'/api/';
 
 function update()
 {
-    console.log("About to call API")
+    //console.log("About to call API")
     fetch(APIGW+"v0/status")
     .then(response => response.json())
     .then(json => {
-        console.log("Received: ", json["otinfo"])
+        // console.log("Received: ", json["otinfo"])
 
         
         for( var key in json["otinfo"] ){
-            console.log("Key now is "+key);
-            console.log("Value is "+json["otinfo"][key]);
+            // console.log("Key now is "+key);
+            // console.log("Value is "+json["otinfo"][key]);
             
             el = document.getElementById(key)
             if (el)
@@ -135,32 +135,26 @@ function update()
 <div class=outer>
 <div class=card id=dhw>
 <h1 id=DHW_h>DHW</h1>
-<h2 id=Tdhw>0.0</h2>
 <h2 id=TdhwSet>0.0</h2>
+<h2 id=Tdhw>0.0</h2>
 </div>
 <div class=card id=boiler>
 <h1 id=boiler_h>Boiler</h1>
-
 <h2 id=Tboiler>0.0</h2>
 <h2 id=Tret>0.0</h2>
-
 <h2 id=modulation_level>0.0</h2>
-<h2 id=status>status</h2>
-
 </div>
 <div class=card id=ch>
 <h1 id=CH_h>CH</h1>
-<h2 id=Tset>0.0</h2>
-
-<h2 id=ch_pres>0.0</h2>
 <h2 id=TrSet>0.0</h2>
 <h2 id=Tr>0.0</h2>
-
+<h2 id=Tset>0.0</h2>
+<h2 id=ch_pres>0.0</h2>
 </div>
 </div>
 <script>
 update() // fill fist-time data
-var timer = setInterval(update, 15 * 1000) // update every 15 seconds
+var timer = setInterval(update, 5 * 1000) // update every 5 seconds
 </script>
 </body>
 </html>

@@ -3,18 +3,40 @@
         {
             "name": "Mac",
             "includePath": [
-                "/Users/erik/Library/Arduino15/packages/esp8266/tools/**",
-                "/Users/erik/Library/Arduino15/packages/esp8266/hardware/esp8266/2.7.1/**",
-                "/Users/erik/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/**"
+                "${workspaceFolder}",
+                "~/Documents/Arduino/**",
+                "~/Library/Arduino15/packages/esp8266/hardware/**",
+                "~/Library/Arduino15/packages/esp8266/tools/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/**",
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/**",
+                "~/Library/Arduino15/packages/esp8266/tools/**",
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/**",
+                "~/Library/Arduino15/packages/esp8266/tools/**",
+                "/Users/erik/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/**",
+                "/Users/erik/Library/Arduino15/packages/esp8266/tools/**"
             ],
-            "forcedInclude": [],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "${workspaceFolder}",
+                    "~/Documents/Arduino",
+                    "/Applications/Arduino.app/Contents/Java",
+                    "~/Library/Arduino15/packages/esp8266/hardware",
+                    "~/Library/Arduino15/packages/esp8266/tools",
+                    "/Applications/Arduino.app/Contents/Java/hardware/arduino"
+                ]
+            },
+            "forcedInclude": [
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/cores/esp8266/Arduino.h"
+            ],
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "~/Library/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/2.5.0-4-b40a506/bin/xtensa-lx106-elf-g++",
             "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4

@@ -1,0 +1,843 @@
+[15:50:07][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:07][  30776| 30088] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:50:08][  30792| 30080] printToDebug( 100): LM: WriteData 024 14 66                  Tr  20.40
+Override check 0
+Override check 1
+Override check 2
+Override found: and changed to 17.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:08][  29448| 28784] printToDebug( 100): LM: WriteData 024 11 00                  Tr  17.00
+[15:50:08][  30792| 30080] printToDebug( 102): LS: WriteAck  024 11 00                  Tr  17.00
+[15:50:09][  31088| 30848] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:09][  31088| 30848] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:10][  31040| 30512] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:10][  29696| 29216] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:10][  31040| 30512] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:11][  31032| 30792] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:11][  30184| 29496] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:12][  28336| 24128] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:12][  29248| 27152] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:12][  29744| 27656] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:13][  30776| 27656] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:50:14][  30792| 30552] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:14][  30792| 30552] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:50:15][  31064| 30824] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+[15:50:15][  30408| 29528] printToDebug( 102): LS: ReadAck   026 3c 00             DHWTemp  60.00
+[15:50:16][  31056| 30816] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:16][  31056| 30816] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:17][  30792| 29632] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:17][  29448| 28984] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:17][  30792| 29632] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:17][  30544| 29632] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:18][  30488| 30248] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:18][  30488| 30248] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:19][  31056| 30816] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:19][  31056| 30816] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:20][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:50:21][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:21][  30792| 29632] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:50:22][  31072| 30624] printToDebug( 100): LM: WriteData 056 3c 00
+Override check 0
+Override check 1
+Override check 2
+[15:50:22][  31072| 30624] printToDebug( 102): LS: WriteAck  056 3c 00
+[15:50:22][  30824| 30624] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:23][  30792| 29632] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:50:24][  30792| 29632] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:24][  30792| 29632] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:25][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:25][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:25][  30776| 30088] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:26][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:50:27][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:27][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:27][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:28][  30776| 27000] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:28][  30776| 27000] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:29][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:29][  30792| 29632] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:50:30][  30792| 29632] printToDebug( 100): LM: WriteData 002 00 30
+Hijacked message, returning ACK
+[15:50:31][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:31][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:32][  30792| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:32][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:32][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:32][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:33][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:50:34][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:34][  30776| 30088] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:35][  30792| 29632] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:35][  30792| 29632] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:36][  31088| 30848] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:36][  31088| 30848] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:50:37][  30776| 30536] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:50:37][  30688| 30208] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:50:38][  30792| 30080] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:50:38][  30792| 30080] printToDebug( 102): LS: ReadAck   027 22 00            Toutside  34.00
+[15:50:39][  31160| 31024] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:39][  31160| 31024] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:40][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:40][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:40][  30776| 30088] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:41][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:41][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:42][  30792| 30080] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:42][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:50:43][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:43][  30776| 30088] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:44][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:50:45][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:45][  30792| 30080] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:50:46][  30776| 30088] printToDebug( 100): LM: ReadData  005 00 00
+[15:50:46][  30776| 30088] printToDebug( 102): LS: ReadAck   005 00 ff
+[15:50:47][  30792| 30080] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:47][  30792| 30080] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:47][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:48][  30976| 30736] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:48][  29632| 29440] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:48][  30976| 30736] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:49][  30776| 30536] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:49][  30776| 30536] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:50][  30792| 29632] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:50][  30792| 29632] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:51][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:51][  30792| 29632] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:50:52][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:52][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:52][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:53][  30816| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:53][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:53][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:50:54][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:50:54][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:50:55][  30776| 29952] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:50:55][  30776| 29952] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:50:56][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:50:56][  30792| 29632] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:50:57][  30792| 29632] printToDebug( 100): LM: WriteData 014 64 00           MaxRelMod 100.00
+Override check 0
+Override check 1
+Override check 2
+[15:50:57][  30792| 29632] printToDebug( 102): LS: WriteAck  014 64 00           MaxRelMod 100.00
+[15:50:57][  30688| 30504] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:50:58][  30776| 26808] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:50:58][  30776| 26808] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:50:59][  30752| 30512] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:50:59][  29408| 29216] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:50:59][  29896| 29216] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:00][  30152| 29480] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:00][  30152| 29480] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:01][  30864| 30624] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:01][  30864| 30624] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:51:02][  30792| 30552] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:02][  30792| 28784] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:02][  30544| 28784] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:03][  30152| 29912] printToDebug( 100): LM: WriteData 016 0f 00               Trset  15.00
+Override check 0
+Override check 1
+Override found: and changed to 22.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:03][  28808| 28616] printToDebug( 100): LM: WriteData 016 16 00               Trset  22.00
+[15:51:03][  30152| 29912] printToDebug( 102): LS: WriteAck  016 16 00               Trset  22.00
+[15:51:04][  31064| 30624] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:04][  31064| 30824] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:05][  30792| 29632] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:05][  29448| 28984] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:05][  30792| 29632] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:06][  31056| 30600] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:06][  31056| 30600] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:07][  30776| 30536] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:07][  30776| 30536] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:51:07][  30528| 30344] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:08][  30792| 29632] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:08][  30792| 29632] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:09][  30792| 29632] printToDebug( 100): LM: ReadData  018 00 00             CH-pres   0.00
+[15:51:09][  30792| 29632] printToDebug( 102): LS: ReadAck   018 01 e5             CH-pres   1.89
+[15:51:10][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:10][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:11][  30816| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:11][  29472| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:11][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:12][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:12][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:12][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:13][  30816| 30384] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:13][  30816| 30384] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:51:14][  30792| 30552] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:14][  30120| 28784] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:15][  30792| 29432] printToDebug( 100): LM: ReadData  019 00 00         DHWflowRate   0.00
+[15:51:15][  30792| 29432] printToDebug( 102): LS: DataInv.  019 00 00         DHWflowRate   0.00
+[15:51:16][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:16][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:17][  30792| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:17][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:17][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:17][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:18][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:51:19][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:19][  30776| 30088] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:20][  30792| 30552] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:20][  30792| 30080] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:51:21][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:51:22][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:22][  30776| 30088] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:22][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:23][  30768| 30528] printToDebug( 100): LM: WriteData 024 14 66                  Tr  20.40
+Override check 0
+Override check 1
+Override check 2
+Override found: and changed to 17.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:23][  29448| 28784] printToDebug( 100): LM: WriteData 024 11 00                  Tr  17.00
+[15:51:23][  30792| 28312] printToDebug( 102): LS: WriteAck  024 11 00                  Tr  17.00
+[15:51:24][  30824| 30584] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:24][  30152| 29288] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:25][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:25][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:25][  30776| 30088] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:26][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:51:27][  31088| 30848] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:27][  31088| 30848] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:27][  30840| 30656] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:28][  30904| 30664] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:28][  30904| 30664] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:51:29][  30816| 30576] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:29][  30792| 28808] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:30][  30792| 28808] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+[15:51:30][  30792| 28808] printToDebug( 102): LS: ReadAck   026 3c 00             DHWTemp  60.00
+[15:51:31][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:31][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:31][  30528| 30088] processAPI  (  28): from[192.168.2.108] URI[/api/v0/boiler/on] method[PUT] 
+[15:51:31][  29144| 28792] overrideAPI ( 375): Entering overrideAPI
+[15:51:31][  29144| 28792] overrideAPI ( 385): from[192.168.2.108] URI[/api/v0/boiler/on] method[PUT] 
+Boiler API called!
+[15:51:32][  30776| 30088] printToDebug( 102): LS: WriteAck  002 01 30
+[15:51:32][  29432| 28792] printToDebug( 100): LM: WriteAck  002 01 30
+Hijacked message, returning ACK
+[15:51:32][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:33][  30792| 30080] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:33][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:34][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:34][  30776| 30088] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:51:35][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:51:36][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:36][  30792| 30080] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:37][  30776| 30088] printToDebug( 100): LM: WriteData 056 3c 00
+Override check 0
+Override check 1
+Override check 2
+[15:51:37][  30776| 30088] printToDebug( 102): LS: WriteAck  056 3c 00
+[15:51:37][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:38][  30816| 30080] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:38][  30792| 30080] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:39][  31160| 31024] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:39][  29816| 29728] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:39][  31160| 31024] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:40][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:51:41][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:41][  30792| 28320] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:42][  30792| 28320] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:42][  30544| 28320] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:51:43][  30776| 29784] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:43][  30776| 29784] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:51:44][  30816| 30576] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:44][  30792| 28336] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:45][  30792| 28336] printToDebug( 100): LM: WriteData 002 00 30
+Hijacked message, returning ACK
+[15:51:46][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:46][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:47][  30792| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:47][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:47][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:47][  30792| 30512] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:48][  31040| 30512] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:48][  31040| 30512] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:51:49][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:51:50][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:51:50][  30792| 30080] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:51:51][  30936| 30144] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:51:51][  30936| 30144] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:51:52][  30776| 30088] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:51:52][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:51:53][  30768| 29592] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:51:53][  30792| 29904] printToDebug( 102): LS: ReadAck   027 22 00            Toutside  34.00
+[15:51:54][  30792| 29904] printToDebug( 100): LM: ReadData  003 00 00
+<- Timeout
+[15:51:55][  31096| 30384] printToDebug( 100): LM: ReadData  003 00 00
+[15:51:55][  31072| 30832] printToDebug( 102): LS: ReadAck   003 01 02
+Not caputed READ_ACK for 3
+[15:51:56][  30816| 30080] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:51:57][  31064| 30480] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:51:57][  31064| 30480] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:51:57][  30704| 30520] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:51:58][  30776| 30536] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:51:58][  29432| 29240] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:51:58][  30776| 30536] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:51:59][  30192| 29464] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:51:59][  31056| 30344] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:00][  31104| 30616] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:52:01][  30776| 30536] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:01][  30776| 30536] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:02][  30776| 30536] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:02][  30792| 30552] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:02][  30544| 30360] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:03][  30792| 30552] printToDebug( 100): LM: ReadData  005 00 00
+<- Timeout
+[15:52:04][  30776| 30088] printToDebug( 100): LM: ReadData  005 00 00
+[15:52:04][  30776| 30088] printToDebug( 102): LS: ReadAck   005 00 ff
+[15:52:05][  30792| 30552] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:05][  30792| 30080] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:06][  30792| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:06][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:06][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:07][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:07][  30776| 30088] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:07][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:08][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:08][  30792| 30080] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:09][  30792| 30080] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:09][  30792| 30080] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:10][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:10][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:11][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:11][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:11][  30792| 28320] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:12][  30792| 28320] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:12][  30792| 28320] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:12][  30544| 28320] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:13][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:52:14][  30768| 30528] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:52:15][  30792| 30080] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:15][  30792| 30080] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:16][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:52:17][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:17][  30792| 28320] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:17][  30544| 28320] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:18][  30792| 28320] printToDebug( 100): LM: WriteData 014 64 00           MaxRelMod 100.00
+Override check 0
+Override check 1
+Override check 2
+[15:52:18][  30792| 28320] printToDebug( 102): LS: WriteAck  014 64 00           MaxRelMod 100.00
+[15:52:19][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:19][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:20][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:20][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:20][  30792| 28320] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:21][  30792| 28320] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:21][  30792| 28320] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:22][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:22][  30776| 30088] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:22][  30528| 30088] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:23][  30768| 29592] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:23][  30792| 30080] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:24][  30792| 30080] printToDebug( 100): LM: WriteData 016 0f 00               Trset  15.00
+Override check 0
+Override check 1
+Override found: and changed to 22.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:24][  29448| 28784] printToDebug( 100): LM: WriteData 016 16 00               Trset  22.00
+[15:52:24][  30792| 30080] printToDebug( 102): LS: WriteAck  016 16 00               Trset  22.00
+[15:52:25][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:52:26][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:26][  30792| 30080] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:27][  30792| 30080] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:27][  29448| 28784] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:27][  30792| 30080] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:27][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:28][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:28][  30776| 30088] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:29][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:29][  30792| 28320] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:30][  30976| 30736] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:30][  30976| 30736] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:31][  30776| 30536] printToDebug( 100): LM: ReadData  018 00 00             CH-pres   0.00
+[15:52:31][  30776| 30536] printToDebug( 102): LS: ReadAck   018 01 e5             CH-pres   1.89
+[15:52:32][  30776| 30536] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:32][  30792| 30552] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:32][  30544| 30360] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:33][  31040| 30800] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:33][  29696| 29504] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:33][  31064| 30824] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:34][  31064| 30616] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:34][  31112| 30872] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:35][  31064| 30824] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:35][  31064| 30824] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:36][  30920| 30680] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:36][  30920| 30680] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:37][  31056| 30576] printToDebug( 100): LM: ReadData  019 00 00         DHWflowRate   0.00
+[15:52:37][  30792| 30552] printToDebug( 102): LS: DataInv.  019 00 00         DHWflowRate   0.00
+[15:52:37][  30408| 29144] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:38][  31056| 30448] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:38][  30792| 30080] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:39][  30488| 29600] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:39][  29144| 28952] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:39][  30488| 29600] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:40][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:52:41][  30896| 30448] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:41][  30792| 30080] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:42][  31064| 30376] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:42][  31064| 30376] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:42][  30144| 29080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:43][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:43][  30776| 30088] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:44][  30776| 30088] printToDebug( 100): LM: WriteData 024 14 66                  Tr  20.40
+Override check 0
+Override check 1
+Override check 2
+Override found: and changed to 17.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:44][  29432| 28792] printToDebug( 100): LM: WriteData 024 11 00                  Tr  17.00
+[15:52:44][  30792| 28320] printToDebug( 102): LS: WriteAck  024 11 00                  Tr  17.00
+[15:52:45][  30792| 28320] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:52:46][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:52:47][  30096| 29232] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:47][  30792| 29408] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:47][  30544| 29408] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:48][  30792| 29408] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:48][  29448| 28760] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:48][  30792| 29408] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:49][  30776| 30088] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:49][  30776| 30088] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:50][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:50][  30792| 28320] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:51][  30792| 28320] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:51][  30792| 28320] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:52:52][  30776| 30088] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+[15:52:52][  30776| 30088] printToDebug( 102): LS: ReadAck   026 3c 00             DHWTemp  60.00
+[15:52:52][  30840| 29912] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:53][  31088| 29912] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:52:54][  30880| 30312] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:52:55][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:52:55][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:52:56][  30776| 30088] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:52:56][  29432| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:52:56][  30792| 28320] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:52:57][  30904| 30664] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:52:57][  30904| 30664] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:52:57][  30656| 30472] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:52:58][  30776| 30088] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:52:58][  30776| 30088] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:52:59][  30776| 30088] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:52:59][  30792| 30080] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:00][  30792| 30080] printToDebug( 100): LM: WriteData 056 3c 00
+Override check 0
+Override check 1
+Override check 2
+[15:53:00][  30792| 30080] printToDebug( 102): LS: WriteAck  056 3c 00
+[15:53:01][  30776| 30088] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:53:01][  30776| 30088] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:53:01][  30528| 30088] processAPI  (  28): from[192.168.2.108] URI[/api/v0/boiler/on] method[PUT] 
+[15:53:01][  29144| 28792] overrideAPI ( 375): Entering overrideAPI
+[15:53:01][  29144| 28792] overrideAPI ( 385): from[192.168.2.108] URI[/api/v0/boiler/on] method[PUT] 
+Boiler API called!
+[15:53:02][  30776| 30088] printToDebug( 102): LS: WriteAck  002 01 30
+[15:53:02][  29432| 28792] printToDebug( 100): LM: WriteAck  002 01 30
+Hijacked message, returning ACK
+[15:53:02][  30544| 30080] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:03][  29232| 27488] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:53:04][  29184| 27488] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+<- Timeout
+[15:53:05][  30664| 28600] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:05][  30600| 30360] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:53:06][  29984| 29200] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:06][  29984| 29200] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:53:07][  30584| 29896] printToDebug( 100): LM: ReadData  151 ef fe
+[15:53:07][  30584| 29896] printToDebug( 102): LS: ReadAck   151 04 e2
+Not caputed READ_ACK for 151
+[15:53:07][  30336| 29896] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:08][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:08][  30600| 29888] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:09][  29984| 28800] printToDebug( 100): LM: WriteData 002 00 30
+Hijacked message, returning ACK
+[15:53:10][  30864| 30624] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:53:10][  30864| 30624] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:53:11][  30872| 30632] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:11][  29528| 29336] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:11][  30600| 30136] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:12][  29752| 29568] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:13][  30872| 30632] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:13][  30880| 30440] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:53:14][  30872| 30632] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:53:15][  30600| 28864] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:53:16][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:53:17][  30872| 30632] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:17][  30136| 29952] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:53:18][  30856| 29928] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:53:19][  30584| 30344] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:19][  30896| 30168] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:53:20][  30896| 30168] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:20][  30600| 29888] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:21][  30712| 30472] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+<- Timeout
+[15:53:22][  30584| 30344] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:53:22][  30584| 30344] printToDebug( 102): LS: ReadAck   027 22 00            Toutside  34.00
+[15:53:22][  30336| 30152] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:23][  30584| 30344] printToDebug( 100): LM: ReadData  006 00 00
+<- Timeout
+[15:53:24][  30712| 30000] printToDebug( 100): LM: ReadData  006 00 00
+[15:53:24][  30944| 30544] printToDebug( 102): LS: ReadAck   006 03 00
+Not caputed READ_ACK for 6
+[15:53:25][  30584| 30344] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:53:25][  30584| 30344] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:53:26][  30584| 30344] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:26][  29240| 29048] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:26][  30600| 30360] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:27][  30600| 30360] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:27][  30600| 30360] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:53:27][  30696| 30208] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:28][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:28][  30584| 29896] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:53:29][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:29][  30600| 29888] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:30][  30600| 29888] printToDebug( 100): LM: ReadData  005 00 00
+[15:53:30][  30600| 29888] printToDebug( 102): LS: ReadAck   005 00 ff
+[15:53:31][  30584| 29896] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+[15:53:31][  30584| 29896] printToDebug( 102): LS: ReadAck   000 03 00[ Status HB -> CH DHW ]
+[15:53:32][  30944| 30544] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:32][  29600| 29248] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:32][  30600| 29440] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:32][  30496| 30160] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:33][  30744| 30352] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:33][  30760| 30520] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:53:34][  30584| 29736] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:34][  30584| 29736] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:53:35][  30864| 30624] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:35][  30600| 30360] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:36][  30848| 30480] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+[15:53:36][  30848| 30480] printToDebug( 102): LS: ReadAck   000 03 02[ Status HB -> CH DHW  LB <- CH ]
+[15:53:37][  30584| 30344] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:37][  29240| 29048] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:37][  30584| 30344] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:37][  30432| 30248] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:38][  30864| 30040] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:38][  30600| 29440] printToDebug( 102): LS: ReadAck   017 64 00              RelMod 100.00
+[15:53:39][  30600| 29440] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:39][  30600| 29440] printToDebug( 102): LS: ReadAck   025 17 00             Tboiler  23.00
+[15:53:40][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:53:41][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:41][  30600| 29888] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:53:42][  30600| 29888] printToDebug( 100): LM: WriteData 014 64 00           MaxRelMod 100.00
+Override check 0
+Override check 1
+Override check 2
+[15:53:42][  30600| 29888] printToDebug( 102): LS: WriteAck  014 64 00           MaxRelMod 100.00
+[15:53:42][  30352| 29888] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:43][  30584| 29896] printToDebug( 100): LM: ReadData  151 ef fe
+[15:53:43][  30584| 29896] printToDebug( 102): LS: ReadAck   151 04 e2
+Not caputed READ_ACK for 151
+[15:53:44][  30584| 29896] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+[15:53:44][  30600| 30360] printToDebug( 102): LS: ReadAck   000 03 0a[ Status HB -> CH DHW  LB <- CH FLM ]
+[15:53:45][  30600| 28592] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:45][  29256| 28592] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:45][  30600| 28592] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:46][  30584| 29896] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:46][  30584| 29896] printToDebug( 102): LS: ReadAck   017 64 00              RelMod 100.00
+[15:53:47][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:47][  30352| 29888] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:53:48][  30600| 29888] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:48][  30600| 29888] printToDebug( 102): LS: ReadAck   025 1f 00             Tboiler  31.00
+[15:53:49][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:49][  30584| 29896] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:53:50][  30584| 29896] printToDebug( 100): LM: WriteData 016 10 80               Trset  16.50
+Override check 0
+Override check 1
+Override found: and changed to 22.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:50][  29240| 28600] printToDebug( 100): LM: WriteData 016 16 00               Trset  22.00
+[15:53:50][  30600| 29888] printToDebug( 102): LS: WriteAck  016 16 00               Trset  22.00
+[15:53:51][  30600| 29888] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+<- Timeout
+[15:53:52][  30584| 29896] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+[15:53:52][  30336| 29896] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:53:53][  30584| 29896] printToDebug( 100): LM: ReadData  000 03 00[ Status HB -> CH DHW ]
+[15:53:53][  30600| 30360] printToDebug( 102): LS: ReadAck   000 03 0a[ Status HB -> CH DHW  LB <- CH FLM ]
+[15:53:54][  30600| 28592] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:53:54][  29256| 28592] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:53:54][  30600| 28592] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:53:55][  30584| 29896] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:53:55][  30584| 29896] printToDebug( 102): LS: ReadAck   017 64 00              RelMod 100.00
+[15:53:56][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:53:56][  30624| 29888] printToDebug( 102): LS: ReadAck   025 22 00             Tboiler  34.00
+[15:53:57][  30600| 29888] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:53:57][  30664| 29920] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:53:57][  30416| 29920] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:53:58][  30376| 29200] printToDebug( 100): LM: ReadData  018 00 00             CH-pres   0.00
+[15:53:58][  30544| 30304] printToDebug( 102): LS: ReadAck   018 01 e5             CH-pres   1.89
+[15:53:59][  30544| 30304] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:53:59][  29928| 29008] printToDebug( 102): LS: ReadAck   000 02 0a[ Status HB -> DHW  LB <- CH FLM ]
+[15:54:00][  30872| 30400] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:00][  29528| 29104] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:00][  30864| 30624] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:01][  30584| 30344] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:01][  30584| 30344] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:02][  29992| 27968] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:02][  30600| 29440] printToDebug( 102): LS: ReadAck   025 21 00             Tboiler  33.00
+[15:54:02][  30352| 29440] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:03][  30600| 29440] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:03][  30864| 30264] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:04][  30584| 29896] printToDebug( 100): LM: ReadData  019 00 00         DHWflowRate   0.00
+[15:54:04][  30584| 29896] printToDebug( 102): LS: DataInv.  019 00 00         DHWflowRate   0.00
+[15:54:05][  30584| 29896] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:54:06][  30600| 29888] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:06][  30600| 29888] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:07][  30584| 29896] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:07][  29240| 28600] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:07][  30584| 29896] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:07][  30336| 29896] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:08][  30584| 29896] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:08][  30576| 29400] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:09][  30600| 29888] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:09][  30600| 29888] printToDebug( 102): LS: ReadAck   025 1d 00             Tboiler  29.00
+[15:54:10][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:10][  30584| 29896] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:11][  30584| 29896] printToDebug( 100): LM: WriteData 024 14 66                  Tr  20.40
+Override check 0
+Override check 1
+Override check 2
+Override found: and changed to 17.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:11][  29240| 28600] printToDebug( 100): LM: WriteData 024 11 00                  Tr  17.00
+[15:54:11][  30600| 29888] printToDebug( 102): LS: WriteAck  024 11 00                  Tr  17.00
+[15:54:12][  30784| 30544] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:12][  30784| 30544] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:12][  30536| 29056] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:13][  30584| 30344] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:13][  29240| 29048] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:13][  30584| 30344] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:14][  30584| 30344] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:14][  30584| 30344] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:15][  30600| 30360] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:15][  30600| 30360] printToDebug( 102): LS: ReadAck   025 1a 00             Tboiler  26.00
+[15:54:16][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:16][  30584| 29896] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:17][  30584| 29896] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+[15:54:17][  30352| 29888] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+<- Timeout
+[15:54:18][  30600| 29888] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+<- Timeout
+[15:54:19][  30584| 29896] printToDebug( 100): LM: ReadData  026 00 00             DHWTemp   0.00
+[15:54:19][  30584| 29896] printToDebug( 102): LS: ReadAck   026 3c 00             DHWTemp  60.00
+[15:54:20][  30584| 29896] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:54:21][  30600| 29888] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:21][  30600| 29888] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:22][  30584| 29896] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:22][  29240| 28600] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:22][  30584| 29896] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:22][  30336| 29896] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:23][  30584| 29896] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:23][  30584| 29896] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:24][  30600| 29888] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:54:25][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:54:26][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+<- Timeout
+[15:54:27][  30600| 29888] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:27][  30600| 29888] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:54:27][  30352| 29888] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:28][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:28][  30584| 29896] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:29][  30584| 29896] printToDebug( 100): LM: WriteData 056 3c 00
+Override check 0
+Override check 1
+Override check 2
+[15:54:29][  30600| 30360] printToDebug( 102): LS: WriteAck  056 3c 00
+[15:54:30][  30600| 29888] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:54:31][  30584| 29896] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:31][  30584| 29896] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:32][  30976| 30832] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:32][  29632| 29536] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:32][  30976| 30832] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:32][  30352| 30168] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:33][  30600| 30360] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:33][  30600| 30360] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:34][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:34][  30584| 29896] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:54:35][  30584| 29896] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+<- Timeout
+[15:54:36][  30600| 29888] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:36][  30600| 29888] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:37][  30584| 29896] printToDebug( 100): LM: WriteData 002 00 30
+Hijacked message, returning ACK
+[15:54:37][  30336| 29896] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:38][  30968| 30832] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:38][  30600| 29440] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:39][  30600| 29440] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:39][  29256| 28792] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:39][  30600| 29440] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:40][  30584| 29896] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:40][  30584| 29896] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:41][  30584| 29896] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:41][  30584| 29896] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:54:42][  30600| 29888] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:42][  30600| 29888] printToDebug( 102): LS: ReadAck   028 18 00                Tret  24.00
+[15:54:42][  30352| 29888] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:43][  30584| 29896] printToDebug( 100): LM: ReadData  027 22 00            Toutside  34.00
+[15:54:43][  30584| 29896] printToDebug( 102): LS: ReadAck   027 23 00            Toutside  35.00
+[15:54:44][  30584| 29896] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:54:45][  30632| 30392] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+[15:54:45][  30632| 30392] printToDebug( 102): LS: ReadAck   000 02 00[ Status HB -> DHW ]
+[15:54:46][  30584| 29896] printToDebug( 100): LM: WriteData 001 00 00                Tset   0.00
+Override check 0
+Override found: and changed to 40.0
+>> [MODIFIED - NEW VERSION BELOW] << 
+[15:54:46][  29240| 28600] printToDebug( 100): LM: WriteData 001 28 00                Tset  40.00
+[15:54:46][  30584| 29896] printToDebug( 102): LS: WriteAck  001 28 00                Tset  40.00
+[15:54:47][  30792| 30552] printToDebug( 100): LM: ReadData  017 00 00              RelMod   0.00
+[15:54:47][  30576| 29560] printToDebug( 102): LS: ReadAck   017 00 00              RelMod   0.00
+[15:54:47][  30352| 30168] processAPI  (  25): from[192.168.2.108] URI[/api/v0/status] method[GET] 
+[15:54:48][  30896| 30184] printToDebug( 100): LM: ReadData  025 00 00             Tboiler   0.00
+[15:54:48][  30896| 30184] printToDebug( 102): LS: ReadAck   025 18 00             Tboiler  24.00
+[15:54:49][  30792| 30552] printToDebug( 100): LM: ReadData  028 00 00                Tret   0.00
+[15:54:49][  30792| 30552] printToDebug( 102): LS: ReadAck   028 17 00                Tret  23.00
+[15:54:50][  30792| 30552] printToDebug( 100): LM: ReadData  005 00 00
+[15:54:50][  30792| 30552] printToDebug( 102): LS: ReadAck   005 00 ff
+[15:54:51][  30600| 29440] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]
+<- Timeout
+[15:54:52][  30584| 30344] printToDebug( 100): LM: ReadData  000 02 00[ Status HB -> DHW ]

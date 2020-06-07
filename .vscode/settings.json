@@ -1,0 +1,24 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "files.associations": {
+        "__config": "cpp",
+        "__tuple": "cpp",
+        "chrono": "cpp",
+        "ios": "cpp",
+        "string": "cpp",
+        "variant": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "functional": "cpp",
+        "mutex": "cpp",
+        "tuple": "cpp",
+        "filesystem": "cpp",
+        "regex": "cpp",
+        "cstddef": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "string_view": "cpp"
+    }
+}

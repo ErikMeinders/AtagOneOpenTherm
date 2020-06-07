@@ -1,0 +1,4 @@
+curl -XPUT http://192.168.2.107/api/v0/override/1/30
+curl -XPUT http://192.168.2.107/api/v0/override/16/22
+curl -XPUT http://192.168.2.107/api/v0/override/24/17
+
