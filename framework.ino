@@ -1,11 +1,28 @@
 
 
+void handleWDTfeed(bool force)
+{
+  if (force || (millis() > WDTfeedTimer))
+  {
+    WDTfeedTimer = millis() + FEEDTIME;
+    digitalWrite(KEEP_ALIVE_PIN, !digitalRead(KEEP_ALIVE_PIN));
+    digitalWrite(LED_BLUE,        digitalRead(KEEP_ALIVE_PIN));
+  }
+
+} // handleWDTfeed();
+
 void frameworkSetup()
 {
   Serial.begin(115200);
   while(!Serial) { /* wait a bit */ }
 
   lastReset     = ESP.getResetReason();
+
+  pinMode(LED_BUILTIN,    OUTPUT); // This is the same pin as LED_BLUE
+  pinMode(KEEP_ALIVE_PIN, OUTPUT);
+  pinMode(LED_BLUE,       OUTPUT);
+  pinMode(LED_RED_B,      OUTPUT);
+  pinMode(LED_RED_C,      OUTPUT);
 
   startTelnet();
   
@@ -74,6 +91,7 @@ void frameworkSetup()
 void frameworkLoop()
 {
     handleNTP();
+    handleWDTfeed(false);
     httpServer.handleClient();
     MDNS.update();
 }

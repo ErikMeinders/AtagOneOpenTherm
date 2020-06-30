@@ -66,7 +66,7 @@ h1 {
 h2 {
 	text-align: center;
 	font-size: 3rem;
-	padding: 0.2rem 0.2rem;	
+	padding: 0.1em 0.2rem 0;	
 	margin: 0;
 }
 
@@ -74,7 +74,7 @@ h3 {
 	text-align: center;
 	font-size: 1.3rem;
 	font-family: 'Heiti TC';
-	padding: 0.2rem 0.2rem;	
+	padding: 0.1rem 0.2rem;	
 	margin: 0;
 }
 </style>
@@ -136,20 +136,29 @@ function update()
 <div class=card id=dhw>
 <h1 id=DHW_h>DHW</h1>
 <h2 id=TdhwSet>0.0</h2>
+<h3>target</h3>
 <h2 id=Tdhw>0.0</h2>
+<h3>actual</h3>
 </div>
 <div class=card id=boiler>
 <h1 id=boiler_h>Boiler</h1>
 <h2 id=Tboiler>0.0</h2>
+<h3>Tboiler</h3>
 <h2 id=Tret>0.0</h2>
+<h3>Tret</h3>
 <h2 id=modulation_level>0.0</h2>
+<h3>modulation pct</h3>
 </div>
 <div class=card id=ch>
 <h1 id=CH_h>CH</h1>
 <h2 id=TrSet>0.0</h2>
+<h3>Troom set</h3>
 <h2 id=Tr>0.0</h2>
+<h3>Troom actual</h3>
 <h2 id=Tset>0.0</h2>
+<h3>Twater set</h3>
 <h2 id=ch_pres>0.0</h2>
+<h3>Pwater</h3>
 </div>
 </div>
 <script>
