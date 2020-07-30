@@ -7,6 +7,14 @@
 #define BOILER_IN        5
 #define BOILER_OUT      14
 
+// temparatures 
+
+#define TEMP_CH_MAX         32.0 // maximum temperature for CH water -- 40.0 max
+
+#define TEMP_CH_BASE_LINE   25.0 // minimum temperature for CH water
+
+#define TEMP_OAT_BASE_LINE  20.0 // OAT below which water temp will increase
+#define TEMP_BASE_FACTOR     1.0 // factor 
 
 int8_t mode=0;
 bool onoffOverride = false;
@@ -436,6 +444,13 @@ void sendStatus()
 
 }
 
+float stooklijn()
+{
+  float toReturn = min(TEMP_CH_MAX, TEMP_CH_BASE_LINE + TEMP_BASE_FACTOR * max(0.0, TEMP_OAT_BASE_LINE - binfo.Toutside));
+  DebugTf("Stooklijn = %5.2f\n", toReturn);
+  return toReturn;
+}
+
 void overrideAPI() 
 {
   char fName[40] = "";
@@ -495,6 +510,13 @@ void overrideAPI()
           float newValue = atof(words[5].c_str());
           OverRides[o].enabled = true;
           OverRides[o].newValue = newValue;
+
+          // received value for setpoint? 
+
+          if(param == OT_MSGID_CH_SETPOINT && newValue != 0.0 && TEMP_BASE_FACTOR != 0)
+          {
+            OverRides[o].newValue = stooklijn();
+          }
         }
       }
     }
