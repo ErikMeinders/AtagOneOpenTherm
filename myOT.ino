@@ -9,9 +9,9 @@
 
 // temparatures 
 
-#define TEMP_CH_MAX         32.0 // maximum temperature for CH water -- 40.0 max
+#define TEMP_CH_MAX         37.0 // maximum temperature for CH water -- 40.0 max
 
-#define TEMP_CH_BASE_LINE   25.0 // minimum temperature for CH water
+#define TEMP_CH_BASE_LINE   35.0 // minimum temperature for CH water
 
 #define TEMP_OAT_BASE_LINE  20.0 // OAT below which water temp will increase
 #define TEMP_BASE_FACTOR     1.0 // factor 
