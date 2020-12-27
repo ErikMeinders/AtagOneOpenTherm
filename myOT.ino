@@ -9,7 +9,7 @@
 
 // temparatures 
 
-#define TEMP_CH_MAX         37.0 // maximum temperature for CH water -- 40.0 max
+#define TEMP_CH_MAX         42.0 // maximum temperature for CH water -- 40.0 max
 
 #define TEMP_CH_BASE_LINE   35.0 // minimum temperature for CH water
 
